@@ -48,7 +48,10 @@
 
   <a href="javascript:void(0);" onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton"></a>
     <div id="trees">
-        {% set section = get_section(path="_index.md") %}       
+        <a href="/"><label class="tree-toggle-label" for="Home">Home</label></a>
+        <ul class="subtree"></ul> <!-- for equal space -->
+
+        {% set section = get_section(path="_index.md") %}
             {% for p in section.subsections %}
                 {% set subsection = get_section(path=p) %}
 
